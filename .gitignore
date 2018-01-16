@@ -6,4 +6,5 @@ target
 /.project
 /.settings
 /RUNNING_PID
-/public
+public
+ui/node_modules

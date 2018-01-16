@@ -22,7 +22,7 @@ class HomeControllerSpec extends PlaySpec with GuiceOneAppPerTest with Injecting
       status(home) mustBe OK
       contentType(home) mustBe Some("application/json")
       val resultJson = contentAsJson(home)
-      resultJson.toString() mustBe """{"content":"Scala Play Angular Seed"}"""
+      resultJson.toString() mustBe """{"content":"Scala Play Vue Seed"}"""
     }
 
     "render the appSummary page from the application" in {
@@ -32,7 +32,7 @@ class HomeControllerSpec extends PlaySpec with GuiceOneAppPerTest with Injecting
       status(home) mustBe OK
       contentType(home) mustBe Some("application/json")
       val resultJson = contentAsJson(home)
-      resultJson.toString() mustBe """{"content":"Scala Play Angular Seed"}"""
+      resultJson.toString() mustBe """{"content":"Scala Play Vue Seed"}"""
     }
 
     "render the appSummary page from the router" in {
@@ -42,7 +42,7 @@ class HomeControllerSpec extends PlaySpec with GuiceOneAppPerTest with Injecting
       status(home) mustBe OK
       contentType(home) mustBe Some("application/json")
       val resultJson = contentAsJson(home)
-      resultJson.toString() mustBe """{"content":"Scala Play Angular Seed"}"""
+      resultJson.toString() mustBe """{"content":"Scala Play Vue Seed"}"""
     }
   }
 }

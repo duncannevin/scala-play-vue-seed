@@ -2,15 +2,14 @@
 
 # Scala Play React Seed
 
-> scala-play-react-seed project illustrates how Play Framework can be used to develop backend/services along with [React](https://reactjs.org/) to develop the front-end/ui.
+> scala-play-vue-seed project illustrates how Play Framework can be used to develop backend/services along with [Vue](https://vuejs.org/) to develop the front-end/ui.
 
 Read more @ http://bit.ly/2A1AzEq
 
 ## Used Versions
 
 * [Play Framework: 2.6.9](https://www.playframework.com/documentation/2.6.x/Home)
-* [React: 16.2.0](https://reactjs.org/)
-* [Create React App: 1.0.17](https://github.com/facebookincubator/create-react-app)
+* [Vue: 2.3.3](https://vuejs.org/)
 
 ## How to use it? 
 
@@ -23,7 +22,7 @@ Read more @ http://bit.ly/2A1AzEq
 
 * Clone the application and open application as a sbt project.
 
-* This application is not using any of the [scala](https://www.playframework.com/documentation/2.6.x/ScalaHome) play views and all the views are served by the [React](https://reactjs.org/) code base which is inside the `ui` folder.
+* This application is not using any of the [scala](https://www.playframework.com/documentation/2.6.x/ScalaHome) play views and all the views are served by the [Vue](https://vuejs.org/) code base which is inside the `ui` folder.
 
 * Used any of the sbt commands listed in the below according to the requirement which are working fine with this application.(To see more details of [sbt](http://www.scala-sbt.org/))
 
@@ -58,16 +57,22 @@ Read more @ http://bit.ly/2A1AzEq
 ├── /target/                        # Generated stuff
 │     ├── /universal/               # Application packaging
 │     └── /web/                     # Compiled web assets
-├── /test/                          # Contains unit tests for java play sources
-├── /ui/                            # React front end sources
-│     ├── /public/                  # Contains the index.html file
-│     ├── /node_modules/            # 3rd-party frontend libraries and utilities
-│     ├── /src/                     # The frontend source code (modules, componensts, models, directives, services etc.) of the application
+├── /test/                          # Contains unit tests for scala play sources
+├── /ui/                            # Vue front end sources
+│     ├── /build/                  # Webpack configs and dev server
+│     ├── /config/                 # Webpack configuration
+│     ├── /node_modules/           # imported node modules
+│     ├── /src/                    # The frontend source code (modules, componensts, models, directives, services etc.) of the application
+│     ├── /static/                  # Static assets (images, dependencies loaded directly by html
+│     ├── /test/                    # Client side tests
+│     ├── /.babelrc/                # Transpiler config
 │     ├── .editorconfig             # Define and maintain consistent coding styles between different editors and IDEs
-│     ├── .gitignore                # Contains ui files to be ignored when pushing to git
+│     ├── .eslintignore             # Files to not lint
+│     ├── .postcssrc                # Post CSS config
+│     ├── index.html                # Page index  
 │     ├── package.json              # Holds various metadata configuration relevant to the ui
-│     ├── README.md                 # Contains all user guide details for the ui
-│     └── yarn.lock                 # Yarn lock file
+│     ├── package-lock.json         # Dependency version lock
+│     └── README.md                 # Contains ui build command instructions
 ├── .gitignore                      # Contains files to be ignored when pushing to git
 ├── build.sbt                       # Play application build script
 ├── LICENSE                         # Contains License Agreement file
@@ -89,7 +94,7 @@ Read more @ http://bit.ly/2A1AzEq
 
 ### FrontendRunHook.scala
 
-* Represents PlayRunHook scala implementation to trigger react start with sbt run command.
+* Represents PlayRunHook scala implementation to trigger vue start with sbt run command.
 
 ```
     ├── /project/
@@ -130,7 +135,7 @@ GET        /             controllers.Assets.at(path="/public", file="index.html"
 GET        /*file        controllers.Assets.at(path="/public", file)
 ```
 
-**Note: _On production build all the front end React build artifacts will be copied to the `public` folder._**
+**Note: _On production build all the front end Vue build artifacts will be copied to the `public` folder._**
 
 ## Contributors
 
