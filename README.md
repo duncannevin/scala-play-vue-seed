@@ -1,7 +1,8 @@
 [![MIT License][license-badge]][LICENSE]
 
 # Scala Play Vue Seed
-
+> Based on [Scala Play Read Seed](https://github.com/yohangz/scala-play-react-seed) by [Yohan Gomez](https://github.com/yohangz)
+>
 > scala-play-vue-seed project illustrates how Play Framework can be used to develop backend/services along with [Vue](https://vuejs.org/) to develop the front-end/ui.
 
 Read more @ http://bit.ly/2A1AzEq
